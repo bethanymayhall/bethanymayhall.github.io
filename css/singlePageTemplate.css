@@ -7,25 +7,27 @@ li {
 }
 
 ul {
-  margin: 0;
+  margin: 8px;
   padding: 0;
 }
 
 body {
   background-color: #F6F3F3;
   overflow: hidden;
+  margin: 0;
 }
 
 header {
   margin: 0;
   margin-top: 0px;
-  margin-right: -6px;
+  margin-right: 0;
 }
 
 .header-right {
   text-align: right;
   font-family: avenir;
   margin: 0;
+  margin-right: -8px;
 }
 
 .active {
@@ -35,7 +37,7 @@ header {
   border-left: 2px solid #5A8FFF;
   border-right: 2px solid #5A8FFF;
   border-bottom: 2px solid #5A8FFF;
-  margin-right: -8px;
+  margin-right: -2px;
   text-decoration: none;
   font-size: 14px;
   -webkit-font-smoothing: antialiased;
@@ -304,7 +306,6 @@ p {
   #Demo1 {
     display: none;
     background: white;
-    margin: -10px;
     padding-top: 10px;
   }
 
@@ -321,7 +322,6 @@ p {
 
   #hide {
     display: none;
-    padding-top: 8px;
   }
 	@  keyframes spin {
     from {
