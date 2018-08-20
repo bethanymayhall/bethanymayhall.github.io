@@ -333,12 +333,12 @@ p {
   }
 }
 
-.header-right {
-  text-align: right;
-  font-family: avenir;
-  margin: 0;
-  z-index: 10;
-  position: sticky;
-	-webkit-transform: translate3d(0,0,0);
-}
+	.header-right {
+	  text-align: right;
+	  font-family: avenir;
+	  margin: 0;
+	  z-index: 10;
+	  position: sticky;
+		-webkit-transform: translate3d(0,0,0);
+	}
 }
