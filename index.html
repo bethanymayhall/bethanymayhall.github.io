@@ -32,12 +32,32 @@
 	<section>
 		<div class="textContainer column">
 			<img class="logo" src="images/Group 2.svg">
-			<h1>Bethany Hall is a Digital Designer & Developer</h1>
+			<h1>Bethany Hall is a <br>
+				<div class="designer">Designer & Developer</div></h1>
 			<h2>Currently a front end dev at the Yoox Net-A-Porter Group</h2>
 			<p> After four years of digital design, I’m currently a dev on the front end of THE OUTNET site.</p>
 			<a id="contactME" href="mailto:beth@bmhall.co.uk">👋 Get in Touch!</a>
 		</div>
 	</section>
+
+
+<!-- <div class="container">
+  <ul id="slides">
+    <li class="slide showing"><p id="div1">LOREM IPSUM<p> </li>
+    <li class="slide"><p>LOREM IPSUM 2<p></li>
+    <li class="slide"><p>LOREM IPSUM 3<p></li>
+  </ul>
+  <div class="buttons">
+    <button class="controls" id="previous"></button>
+
+    <button class="controls" id="pause" >&#10074;&#10074;</button>
+
+    <button class="controls" id="next"></button>
+  </div>
+</div> -->
+
+
+
 </div>
 </body>
 </html>
@@ -66,4 +86,62 @@
 			img2.style.display = 'spin 0.5s';
 		}
 	}, false);
+
+
+	var controls = document.querySelectorAll('.controls');
+for(var i=0; i<controls.length; i++){
+    controls[i].style.display = 'inline-block';
+}
+
+var slides = document.querySelectorAll('#slides .slide');
+var currentSlide = 0;
+var slideInterval = setInterval(nextSlide,2000);
+clearInterval(slideInterval);
+
+function nextSlide(){
+    goToSlide(currentSlide+1);
+}
+
+function previousSlide(){
+    goToSlide(currentSlide-1);
+}
+
+function goToSlide(n){
+    slides[currentSlide].className = 'slide';
+    currentSlide = (n+slides.length)%slides.length;
+    slides[currentSlide].className = 'slide showing';
+}
+
+
+var playing = true;
+var pauseButton = document.getElementById('pause');
+
+function pauseSlideshow(){
+    pauseButton.innerHTML = '&#9658;'; // play character
+    playing = false;
+    clearInterval(slideInterval);
+}
+
+function playSlideshow(){
+    pauseButton.innerHTML = '&#10074;&#10074;'; // pause character
+    playing = true;
+    slideInterval = setInterval(nextSlide,2000);
+}
+
+pauseButton.onclick = function(){
+    if(playing){ pauseSlideshow(); }
+    else{ playSlideshow(); }
+};
+
+var next = document.getElementById('next');
+var previous = document.getElementById('previous');
+
+next.onclick = function(){
+    pauseSlideshow();
+    nextSlide();
+};
+previous.onclick = function(){
+    pauseSlideshow();
+    previousSlide();
+};
 </script>

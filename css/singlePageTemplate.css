@@ -15,7 +15,7 @@
 
 @-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 @-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0,; } to { opacity:1; } }
 
 ul > li {
   list-style: none;
@@ -109,6 +109,25 @@ h1 {
   font-size: 3em;
   margin: 0;
   padding-bottom: 10px;
+}
+
+.designer {
+    overflow: hidden;
+    animation: typing 3.5s steps(15, end), blinkcaret .5s step-end infinite;
+    white-space: nowrap;
+      border-right: .1em solid black;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blinkcaret {
+  from, to { border-color: transparent }
+  50% { border-color: orange }
 }
 
 h2 {
@@ -246,6 +265,168 @@ p {
   }
 }
 
+/*
+essential styles:
+these make the slideshow work
+*/
+#slides{
+    position: relative;
+    height: 100vh;
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+    width:100%;
+}
+
+.slide{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 1;
+
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    transition: opacity 1s;
+}
+
+.showing{
+    opacity: 1;
+    z-index: 2;
+}
+
+
+.controls{
+    display: none;
+}
+
+
+/*
+non-essential styles:
+just for appearance; change whatever you want
+*/
+
+.slide{
+    font-size: 40px;
+    box-sizing: -box;
+    background: #333;
+    color: #fff;
+    width: 500px;
+    height: 400px;
+    float: right;
+  
+  background-size: cover;
+}
+
+/* http://unrestrictedstock.com/wp-content/uploads/snowy-winter-vignette-bokeh-night-snow-falling-free-stock-photo.jpg */
+.slide:nth-of-type(1){
+  background-image: url('https://mir-s3-cdn-cf.behance.net/projects/404/4eaec169146451.5b76163554658.jpg');
+}
+
+/* http://www.dawghousedesignstudio.com/wp-content/uploads/2010/01/25/free-stock-photos-1.jpg */
+.slide:nth-of-type(2){
+  background-image: url('https://mir-s3-cdn-cf.behance.net/projects/404/4eaec169146451.5b76163554658.jpg');
+}
+
+/* http://www.stockfreeimages.com/static/homepage/waterfall-free-stock-photo-244915.jpg */
+.slide:nth-of-type(3){
+  background-image: url('https://mir-s3-cdn-cf.behance.net/projects/404/4eaec169146451.5b76163554658.jpg');
+}
+
+.controls{
+  background: #333;
+  color: #fff;
+  border: none;
+  padding: 20px 0px;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.controls:hover,
+.controls:focus{
+  background: #eee;
+  color: #333;
+  opacity: 0;
+}
+
+.container{
+  position: relative;
+}
+
+.buttons{
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 10;
+  font-size: 0px;
+  width: 100%;
+  height: 90%;
+    top: 10%;
+}
+
+button #pause {
+  display: none;
+}
+
+/* Safari 4.0 - 8.0 */
+#div1 {-webkit-animation-timing-function: linear;}
+
+
+/* Standard syntax */
+#div1 {animation-timing-function: linear;}
+
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes mymove {
+    from {bottom: 0px;}
+    to {bottom: 50px;}
+}
+
+/* Standard syntax */
+@keyframes mymove {
+    from {bottom: 0px;}
+    to {bottom: 50px;}
+}
+
+#pause {
+  opacity: 0;
+  position: absolute;
+}
+
+#previous {
+  width: 50%;
+  height: 100vh;
+  margin: 0;
+  float: left;
+  cursor: w-resize; 
+}
+
+#next {
+  width: 50%;
+  height: 100vh;
+  margin: 0;
+  float: right;
+  cursor: e-resize; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width: 760px) {
   h1 {
     font-size: 2.5em;
@@ -275,6 +456,17 @@ p {
     z-index: -2;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
 
 @media (max-width: 490px) {
   .active {
@@ -360,4 +552,8 @@ p {
 	  position: sticky;
 		-webkit-transform: translate3d(0,0,0);
 	}
+
+  .designer {
+    font-size: 0.9em;
+  }
 }
