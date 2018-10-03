@@ -514,7 +514,7 @@ button #pause {
 
 @media (max-width: 760px) {
   h1 {
-    font-size: 2.5em;
+    font-size: 2em;
   }
 
   .item--style-1 {
@@ -645,11 +645,11 @@ button #pause {
 	  font-family: avenir;
 	  margin: 0;
 	  z-index: 10;
-	  position: sticky;
+    position: relative;
 		-webkit-transform: translate3d(0,0,0);
 	}
 
   .designer {
-    font-size: 0.8em;
+    font-size: 0.75em;
   }
 }
