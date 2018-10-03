@@ -87,24 +87,6 @@
 		</div>
 	</section>
 
-
-<!-- <div class="container">
-  <ul id="slides">
-    <li class="slide showing"><p id="div1">LOREM IPSUM<p> </li>
-    <li class="slide"><p>LOREM IPSUM 2<p></li>
-    <li class="slide"><p>LOREM IPSUM 3<p></li>
-  </ul>
-  <div class="buttons">
-    <button class="controls" id="previous"></button>
-
-    <button class="controls" id="pause" >&#10074;&#10074;</button>
-
-    <button class="controls" id="next"></button>
-  </div>
-</div> -->
-
-
-
 </div>
 </body>
 </html>
@@ -132,7 +114,6 @@
 			img.style.animation = 'spin 0.5s';
 			img2.style.display = 'spin 0.5s';
 		}
-<<<<<<< HEAD
 	});
 
 var popup = document.getElementById("popup"),
@@ -156,66 +137,4 @@ close.addEventListener("click", function() {
 		popupbox.style.display = 'block';
 	}
 });
-
-=======
-	}, false);
-
-
-	var controls = document.querySelectorAll('.controls');
-for(var i=0; i<controls.length; i++){
-    controls[i].style.display = 'inline-block';
-}
-
-var slides = document.querySelectorAll('#slides .slide');
-var currentSlide = 0;
-var slideInterval = setInterval(nextSlide,2000);
-clearInterval(slideInterval);
-
-function nextSlide(){
-    goToSlide(currentSlide+1);
-}
-
-function previousSlide(){
-    goToSlide(currentSlide-1);
-}
-
-function goToSlide(n){
-    slides[currentSlide].className = 'slide';
-    currentSlide = (n+slides.length)%slides.length;
-    slides[currentSlide].className = 'slide showing';
-}
-
-
-var playing = true;
-var pauseButton = document.getElementById('pause');
-
-function pauseSlideshow(){
-    pauseButton.innerHTML = '&#9658;'; // play character
-    playing = false;
-    clearInterval(slideInterval);
-}
-
-function playSlideshow(){
-    pauseButton.innerHTML = '&#10074;&#10074;'; // pause character
-    playing = true;
-    slideInterval = setInterval(nextSlide,2000);
-}
-
-pauseButton.onclick = function(){
-    if(playing){ pauseSlideshow(); }
-    else{ playSlideshow(); }
-};
-
-var next = document.getElementById('next');
-var previous = document.getElementById('previous');
-
-next.onclick = function(){
-    pauseSlideshow();
-    nextSlide();
-};
-previous.onclick = function(){
-    pauseSlideshow();
-    previousSlide();
-};
->>>>>>> c229d250ef3956df2e0560b375f4034134d541c1
 </script>

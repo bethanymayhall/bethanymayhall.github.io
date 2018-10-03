@@ -402,7 +402,7 @@ just for appearance; change whatever you want
     width: 500px;
     height: 400px;
     float: right;
-  
+
   background-size: cover;
 }
 
@@ -487,7 +487,7 @@ button #pause {
   height: 100vh;
   margin: 0;
   float: left;
-  cursor: w-resize; 
+  cursor: w-resize;
 }
 
 #next {
@@ -495,7 +495,7 @@ button #pause {
   height: 100vh;
   margin: 0;
   float: right;
-  cursor: e-resize; 
+  cursor: e-resize;
 }
 
 
@@ -550,22 +550,11 @@ button #pause {
   }
 }
 
-<<<<<<< HEAD
 @media (max-width: 532px) {
-=======
-
-
-
-
-
-
-
-
 
 
 
 @media (max-width: 490px) {
->>>>>>> c229d250ef3956df2e0560b375f4034134d541c1
   .active {
     padding: 12px 24px 12px 24px;
     color: #3D3D3D;
