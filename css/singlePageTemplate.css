@@ -263,7 +263,7 @@ p {
   left: 0;
   z-index: -1;
   -webkit-animation: float 6s infinite linear;
-  width: 80px;
+  width: 110px;
 }
 
 #path2 {
@@ -527,7 +527,8 @@ button #pause {
 
 @media (max-width: 760px) {
   h1 {
-    font-size: 2em;
+    font-size: 1.8em;
+    letter-spacing: 0;
   }
 
   .item--style-1 {
@@ -664,6 +665,6 @@ button #pause {
 	}
 
   .designer {
-    font-size: 0.8em;
+    font-size: 0.7em;
   }
 }
