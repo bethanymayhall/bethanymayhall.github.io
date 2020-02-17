@@ -551,7 +551,7 @@ button #pause {
     color: #3D3D3D;
     width: 90vw;
     margin-right: 10px;
-    position: fixed;
+    position: absolute;
     top: 50%;
     transform: translatey(-50%);
     -webkit-animation: anim 3s ease-in;
@@ -646,6 +646,7 @@ button #pause {
     position: fixed;
     right: 10px;
     padding: 14px;
+    position: fixed;
   }
 
   #hide {
